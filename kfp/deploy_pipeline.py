@@ -8,7 +8,7 @@ from pipelines.end_to_end_pipeline import end_to_end_pipeline
 
 
 # The URL of the Kubeflow Pipelines Host (can be found in the AI platform pipelines UI)
-KFP_HOST = 'https://1cad5bb08a32308d-dot-europe-west1.pipelines.googleusercontent.com'
+KFP_HOST = 'YOUR-KFP-HOST'
 KFP_CLIENT = kfp.Client(KFP_HOST)
 
 PIPELINES = {

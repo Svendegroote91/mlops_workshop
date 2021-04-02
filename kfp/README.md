@@ -100,14 +100,7 @@ python deploy_pipeline.py --identifier=[YOUR-NAME] --pipeline_name=end_to_end_pi
 ```
 
 ### Running the pipeline
-Once the pipeline is uploaded, it is ready to be run. As with deployment, you can do this either through the UI or using Python code. In either case, you need to provide all the necessary input parameters to the pipeline and then tell KFP to run it.   
+Once the pipeline is uploaded, it is ready to be run. As with deployment, you can do this either through the UI or using Python code. 
+In either case, you need to provide all the necessary input parameters to the pipeline and then tell KFP to run it.   
 KFP will then identify which components need be run in which order, it will fetch them from GCR, provide them with the necessary parameters and schedule them on a machine that still has enough resources left to run the component.  
-The `run_pipeline.py` script illustrates how you can start a pipeline run from Python code. 
-
-```
-python run_pipeline.py --job_name=[YOUR-JOB-NAME] --identifier=[YOUR-NAME] --pipeline_name=end_to_end_pipeline
-``` 
-
-## Configuring the KFP cluster
-Whenever you run a pipeline, all its components are run in the correct order on the KFP GKE cluster. By default, this cluster only has 3 machines with 2 vCPUs and 4 GB of memory each. 
-For larger workloads, this is of course insufficient and you need to increase the available resources. 
+You can navigate to the Kubeflow Pipelines UI and create a run for your pipeline.
